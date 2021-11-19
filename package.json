@@ -8,9 +8,7 @@
   },
   "keywords": [
     "config",
-    "files",
-    "_headers",
-    "_redirects"
+    "files"
   ],
   "author": "A.Belachkar <silverdaymon@gmail.com>",
   "license": "ISC",
