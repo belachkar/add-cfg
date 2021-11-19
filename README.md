@@ -1,5 +1,7 @@
 # Add it
 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
 It allows you to add the most common configuration files to your projects.
 
 ## Dependencies
