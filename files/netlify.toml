@@ -1,0 +1,50 @@
+[build]
+  # Directory to change to before starting a build.
+  # This is where we will look for package.json/.nvmrc/etc.
+  # If not set, defaults to the root directory.
+  base = "/"
+  publish = "build"
+  command = "npm run build"
+
+# The following redirect is intended for use with most SPAs that handle
+# routing internally.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+## Examples ##
+
+# [[redirects]]
+#   from = "/old-path"
+#   to = "/new-path"
+#   status = 301
+#   force = false
+#   query = {path = ":path"}
+#   conditions = {Language = ["en"], Country = ["US"], Role = ["admin"]}
+
+## This rule redirects to an external API, signing requests with a secret
+# [[redirects]]
+#   from = "/search"
+#   to = "https://api.mysearch.com"
+#   status = 200
+#   force = true # COMMENT: ensure that we always redirect
+#   headers = {X-From = "Netlify"}
+#   signed = "API_SIGNATURE_TOKEN"
+
+# [[headers]]
+#   for = "/*"
+#   [headers.values]
+#     X-Frame-Options = "DENY"
+#     X-XSS-Protection = "1; mode=block"
+
+# Multi-value headers
+# => cache-control: max-age=0,no-cache,no-store,must-revalidate
+# [[headers]]
+#   for = "/*"
+#   [headers.values]
+# 	cache-control = '''
+# 	max-age=0,
+# 	no-cache,
+# 	no-store,
+# 	must-revalidate'''

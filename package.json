@@ -1,0 +1,27 @@
+{
+  "name": "addit",
+  "version": "0.1.0",
+  "description": "Add config and optional files to projects",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "config",
+    "files",
+    "_headers",
+    "_redirects"
+  ],
+  "author": "A.Belachkar <silverdaymon@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "clear": "^0.1.0",
+    "figlet": "^1.5.2",
+    "inquirer": "^8.2.0",
+    "minimist": "^1.2.5"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.1.3"
+  }
+}
