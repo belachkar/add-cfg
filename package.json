@@ -9,10 +9,14 @@
   },
   "keywords": [
     "config",
-    "files"
+    "files",
+    "gitignore",
+    "netlify",
+    "eslintrc",
+    "tsconfig"
   ],
   "author": "Ali Belachkar <silverdaymon@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.2",
     "clear": "^0.1.0",
@@ -22,5 +26,13 @@
   },
   "devDependencies": {
     "@types/inquirer": "^8.1.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belachkar/addit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/belachkar/addit/issues"
+  },
+  "homepage": "https://github.com/belachkar/addit#readme"
 }

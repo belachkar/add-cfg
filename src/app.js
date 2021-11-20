@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const clear = require('clear');
 const figlet = require('figlet');
 
@@ -12,7 +13,6 @@ dbg.banner(figlet.textSync('Add It', { horizontalLayout: 'full' }));
 const run = async () => {
   try {
     const choices = await cmds.listOptionalFiles();
-    // dbg.info(JSON.stringify(choices, null, 2));
 
     files.copyFiles(choices.files);
   } catch (err) {
