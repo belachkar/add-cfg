@@ -1,11 +1,10 @@
 const path = require('path');
 const fs = require('fs');
+
 const { dbgMsg: dbg } = require('./utils');
 
 module.exports = {
-  getCurrentDirBase: () => {
-    return path.basename(process.cwd());
-  },
+  getCurrentDirBase: () => path.basename(process.cwd()),
   isDirExists: (filePath) => {
     try {
       return fs.statSync(filePath).isDirectory();
@@ -18,24 +17,24 @@ module.exports = {
 
     const destDir = process.cwd();
     const filesMap = {
-      headers: '_headers',
-      redirects: '_redirects',
-      netlify: 'netlify.toml',
-      tsconfig: 'tsconfig.json',
-      gitignore: '.gitignore',
-      eslint: '.eslintrc.json',
+      headers: { srcFileName: '_headers', destFileName: '_headers' },
+      redirects: { srcFileName: '_redirects', destFileName: '_redirects' },
+      netlify: { srcFileName: 'netlify.toml', destFileName: 'netlify.toml' },
+      tsconfig: { srcFileName: 'tsconfig.json', destFileName: 'tsconfig.json' },
+      gitignore: { srcFileName: 'gitignore', destFileName: '.gitignore' },
+      eslint: { srcFileName: '.eslintrc.json', destFileName: '.eslintrc.json' },
     };
 
     files.forEach((file) => {
-      const srcFileName = filesMap[file];
+      const { srcFileName, destFileName } = filesMap[file];
       const srcFilePath = path.join(__dirname, '..', 'files', srcFileName);
-      const destFilePath = path.join(destDir, srcFileName);
+      const destFilePath = path.join(destDir, destFileName);
 
       try {
         fs.copyFileSync(srcFilePath, destFilePath, fs.constants.COPYFILE_EXCL);
         dbg.ok(`✓ ${srcFileName} was copied to ${destFilePath}`);
       } catch (err) {
-        if (err.code === 'EEXIST') return dbg.info(`! ${err.message}`);
+        if (err.code === 'EEXIST') return dbg.info(`!Error: file already exists: ${destFilePath}`);
         throw new Error('Error from "files.js" on copying file:\n => ' + err.message || err);
       }
     });
