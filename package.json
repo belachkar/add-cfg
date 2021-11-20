@@ -1,6 +1,6 @@
 {
   "name": "add-cfg",
-  "version": "0.1.4",
+  "version": "0.1.41",
   "description": "CLI tool that add configuration and optional files to projects, and more",
   "main": "src/app.js",
   "bin": "src/app.js",
