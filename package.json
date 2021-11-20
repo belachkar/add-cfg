@@ -1,6 +1,6 @@
 {
-  "name": "addit",
-  "version": "0.1.0",
+  "name": "add-cfg",
+  "version": "0.1.1",
   "description": "Add configuration and optional files to projects",
   "main": "src/app.js",
   "bin": "src/app.js",
