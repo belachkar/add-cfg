@@ -8,8 +8,8 @@ CLI tool to add the most common configuration files to your projects, and more.
 
 It make since to install it globally, or just to execute the binary:
 
-- Install it globally: `npm i -g addit`.
-- Or, execute the binary directly: `npx addit`.
+- Install it globally: `npm i -g add-cfg`.
+- Or, execute the binary directly: `npx add-cfg`.
 
 ## Fonctionalities to be added
 

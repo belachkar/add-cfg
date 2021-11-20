@@ -18,8 +18,8 @@ To get started locally, follow these instructions:
 
 To use this tool you could:
 
-- Install it globally: `npm i -g addit`.
-- Or, execute the binary directly: `npx addit`.
+- Install it globally: `npm i -g add-cfg`.
+- Or, execute the binary directly: `npx add-cfg`.
 
 Then fellow the options.
 

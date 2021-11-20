@@ -1,7 +1,7 @@
 {
   "name": "add-cfg",
   "version": "0.1.1",
-  "description": "Add configuration and optional files to projects",
+  "description": "CLI tool that add configuration and optional files to projects, and more",
   "main": "src/app.js",
   "bin": "src/app.js",
   "scripts": {
@@ -29,10 +29,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/belachkar/addit.git"
+    "url": "git+https://github.com/belachkar/add-cfg.git"
   },
   "bugs": {
-    "url": "https://github.com/belachkar/addit/issues"
+    "url": "https://github.com/belachkar/add-cfg/issues"
   },
-  "homepage": "https://github.com/belachkar/addit#readme"
+  "homepage": "https://github.com/belachkar/add-cfg#readme"
 }
