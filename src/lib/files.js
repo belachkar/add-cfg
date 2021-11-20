@@ -12,6 +12,7 @@ module.exports = {
       return false;
     }
   },
+  // TODO: Add force options to override existing files
   copyFiles: (files) => {
     if (!files || !files.length) return;
 
@@ -34,7 +35,7 @@ module.exports = {
         fs.copyFileSync(srcFilePath, destFilePath, fs.constants.COPYFILE_EXCL);
         dbg.ok(`✓ ${srcFileName} was copied to ${destFilePath}`);
       } catch (err) {
-        if (err.code === 'EEXIST') return dbg.info(`!Error: file already exists: ${destFilePath}`);
+        if (err.code === 'EEXIST') return dbg.info(`!Warn: file already exists: ${destFilePath}`);
         throw new Error('Error from "files.js" on copying file:\n => ' + err.message || err);
       }
     });
