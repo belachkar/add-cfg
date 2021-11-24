@@ -12,6 +12,10 @@ dbg.banner(figlet.textSync('Add It', { horizontalLayout: 'full' }));
 
 const run = async () => {
   try {
+    // TODO: Add project framework detection
+    // TODO: Add framework choice
+    // TODO: Add newely added files to the choices: .browserslistrc, .editorconfig, .eslintignore
+    // TODO: Add also: reactJS/.eslintrc.json
     const choices = await cmds.listOptionalFiles();
 
     files.copyFiles(choices.files);
