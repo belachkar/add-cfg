@@ -12,6 +12,7 @@ dbg.banner(figlet.textSync('Add It', { horizontalLayout: 'full' }));
 
 const run = async () => {
   try {
+    // TODO: Add "css.customData" to the '.vscode.settings.json' to apply 'css_custom_data.json'.
     // TODO: Add project framework detection
     // TODO: Add framework choice
     // TODO: Add newely added files to the choices: .browserslistrc, .editorconfig, .eslintignore
